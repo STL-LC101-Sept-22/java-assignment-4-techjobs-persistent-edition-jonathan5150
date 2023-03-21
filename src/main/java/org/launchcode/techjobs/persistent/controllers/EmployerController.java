@@ -22,7 +22,7 @@ public class EmployerController {
     public String index(Model model) {
         model.addAttribute("employers", employerRepository.findAll());
         //Above line is def wrong
-        return "employers/index";
+        return "index";
     }
 
     @GetMapping("add")

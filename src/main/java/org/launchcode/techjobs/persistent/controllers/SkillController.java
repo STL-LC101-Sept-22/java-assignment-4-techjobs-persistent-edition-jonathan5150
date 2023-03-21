@@ -20,14 +20,13 @@ public class SkillController {
 
     @GetMapping("")
     public String index(Model model) {
-        model.addAttribute("employers", skillRepository.findAll());
-        //Above line is def wrong
-        return "skills/index";
+        model.addAttribute("skills", skillRepository.findAll());
+        return "index";
     }
 
     @GetMapping("add")
     public String displayAddSkillForm(Model model) {
-        model.addAttribute(new Skill());
+        model.addAttribute("skill", new Skill());
         return "skills/add";
     }
 
